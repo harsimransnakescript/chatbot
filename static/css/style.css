@@ -1,0 +1,978 @@
+/* font kit start here */
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
+        url('../fonts/Poppins-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../fonts/Poppins-Bold.woff2') format('woff2'),
+        url('../fonts/Poppins-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* font kit end here */
+body{
+	margin: 0px;
+	padding: 0px;
+	font-family: 'Poppins';
+}
+.main-button {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+}
+#submit-payment {
+    margin-top: 6px;
+}
+#geocoder{
+    margin: 0px !important;
+}
+/* .booking-form .btn-color-mode-switch{
+    margin: 0px 0px;
+}
+.booking-form .btn-color-mode-switch-purpose{
+    margin: 0px 10px;
+} */
+#google_translate_element .goog-te-combo{
+    background: rgb(128 128 128 / 44%);
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 2px solid #ff601f;
+    transition: ease-out 0.3s;
+    box-shadow: inset 0 0 0 0 #000;
+    text-transform: capitalize;
+    font-family: 'Poppins';
+    cursor: pointer;
+}
+.book-travel{
+
+	min-height: 100vh;
+}
+.travel-form-inner{
+	width: 100%;
+}
+.login-logo img{
+	width: 291px;
+}
+.connect-btn a {
+    background: #ff601f;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 2px solid #ff601f;
+    transition: ease-out 0.3s;
+    box-shadow: inset 0 0 0 0 #000;
+    text-transform: capitalize;
+	font-family: 'Poppins';
+    cursor: pointer;
+}
+.connect-btn a:hover{
+	background-color: #000;
+	color: #fff;
+    background: rgb(128 128 128 / 44%);
+	cursor: pointer;
+	transition: ease-out 0.5s;
+	border: 2px solid #ff601f;
+	box-shadow: inset 0 100px 0 0 rgb(128 128 128 / 44%);
+}
+.booking-form input{
+	padding: 10px 19px;
+	font-size: 14px;
+	border-radius: 4px;
+	color: #212529;
+	font-family: 'Poppins';
+    height: auto;
+}
+.booking-form .form-control:focus{
+	box-shadow: none;
+	border-color: #dee2e6;
+}
+.booking-form form{
+	padding: 20px 20px;
+	/*box-shadow: #ffb99d 0px 0px 12px;*/
+	border-radius: 10px;
+}
+.connect_to_travel_agent_modal .form-control:focus{
+    box-shadow: none;
+}
+.connect_to_travel_agent_modal button.submit_btn{
+    background: #ff601f;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 2px solid #ff601f;
+    transition: ease-out 0.3s;
+    box-shadow: inset 0 0 0 0 #000;
+    text-transform: capitalize;
+	font-family: 'Poppins';
+}
+.connect_to_travel_agent_modal button.close-btn{
+    background: #000;
+    text-decoration: none;
+    color: #ffffff;
+    text-align: center;
+    padding: 5px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    border: 2px solid #000;
+    transition: ease-out 0.3s;
+    box-shadow: inset 0 0 0 0 #000;
+    text-transform: capitalize;
+	font-family: 'Poppins';
+}
+.connect_to_travel_agent_modal h5.modal-title{
+    font-family: 'Poppins';
+	font-size: 20px;
+    font-weight: 600;
+}
+.connect_to_travel_agent_modal .btn-close:focus{
+    box-shadow: none;
+}
+.connect_to_travel_agent_modal .modal-body label{
+    font-size: 14px;
+    font-family: 'Poppins';
+    font-weight: 500;
+}
+.connect_to_travel_agent_modal .modal-body input{
+    padding: 10px 19px;
+    border-radius: 4px;
+    height: auto;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.booking-form form button{
+	background: #ff601f;
+	color: #fff;
+	font-family: 'Poppins';
+	font-size: 18px;
+    font-weight: 500;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px 14px;
+    border: 2px solid #ff601f;
+    box-shadow: inset 0 0 0 0 #000;
+    transition: ease-out 0.3s;
+}
+ .booking-form form button:hover{
+	color: #fff;
+	border: 2px solid #ff601f;
+	transition: ease-out 0.5s;
+	box-shadow: inset 0 100px 0 0 rgb(128 128 128 / 44%);
+    background: rgb(128 128 128 / 44%);
+ }
+.booking-form form button.btn:first-child:active{
+	background-color:#ff601f;
+	color: #fff;
+	border: 1px solid #ff601f;
+}
+.book-travel{
+	background: rgb(128 128 128 / 75%);
+}
+.checked{
+    color: orange;
+}
+
+.rating {
+    float: left;
+    unicode-bidi: bidi-override;
+    direction: ltr;
+  }
+
+  .rating > span:before {
+    content: "\2606";
+    position: absolute;
+  }
+
+  .rating > span:hover:before,
+  .rating > span.selected:before {
+    content: "\2605";
+    position: absolute;
+    color: black; /* Color for selected star */
+  }
+
+
+
+.travel-header{
+	display: grid;
+    grid-template-columns: 30% 70%;
+    align-items: center;
+    padding: 20px 0px;
+}
+/* .connect-btn{
+	display: flex;
+	justify-content: end;
+} */
+.booking-form{
+	margin: 90px 0px 0px;
+    background: #ffffff47;
+    box-shadow: 0px 0px 5px #a9a9a9;
+}
+.booking-form label{
+    color: #000000 !important;
+}
+.booking-form p{
+    color: #000000 !important;
+}
+/*responsive css start*/
+
+@media(min-width: 1399px){
+
+
+    .booking-form .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after,
+    .booking-form .btn-color-mode-switch-purpose input[type="checkbox"]:checked + label.btn-color-mode-switch-inner-purpose:after {
+        left: 180px !important;
+    }
+    }
+@media(max-width: 1399px){
+
+.booking-form .btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after,
+.booking-form .btn-color-mode-switch-purpose input[type="checkbox"]:checked + label.btn-color-mode-switch-inner-purpose:after {
+    left: unset !important;
+    right: 0;
+}
+}
+@media(max-width: 991px){
+    .login-logo img{
+        width: 200px;
+
+
+}
+.connect-btn a{
+    font-size: 14px;
+}
+}
+
+@media(max-width: 767px){
+    .connect-btn a{
+        font-size: 14px;
+    }
+    .login-logo img{
+		width: 130px !important;
+	}
+}
+
+@media(max-width: 576px){
+	.travel-header{
+		display: block;
+	}
+	.connect-btn{
+		justify-content: center;
+		margin-top: 10px;
+	}
+
+	.login-logo{
+		text-align: center;
+	}
+	.booking-form{
+		margin: 40px 0px 0px;
+	}
+    .login-logo img{
+        width: 200px;
+    }
+}
+/*responsive css end*/
+
+#response{
+	color: black;
+}
+
+#response ul{
+
+    list-style: none;
+}
+
+#response-container {
+	display: block;
+  }
+
+#loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: None;
+    z-index: 9999;
+    display: none;
+}
+
+#loading::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: #333;
+    animation: spin 1s ease-in-out infinite;
+}
+
+#loading1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: None;
+    z-index: 9999;
+    display: none;
+}
+
+#loading1::before {
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 11%;
+    left: 85%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border-radius: 50%;
+    border: 3px solid #ccc;
+    border-top-color: #333;
+    animation: spin 1s ease-in-out infinite;
+}
+
+.disabled {
+    background-color: #000;
+    background: #000;
+    border-color: #000;
+    cursor: default;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  .disabled_a {
+    background-color: #000;
+    background: #000;
+    border-color: #000;
+    cursor: default;
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 10px 0;
+    padding-left: 20px;
+    position: relative;
+}
+
+li::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #333;
+    position: absolute;
+    left: 4px;
+    top: 7px;
+}
+
+li.first {
+    margin-top: 0;
+}
+
+/* Switch Budget */
+div.btn-container{
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+}
+
+div.btn-container i{
+    display: inline-block;
+    position: relative;
+    top: -9px;
+}
+
+label {
+    font-size: 13px;
+    color: #424242;
+    font-weight: 500;
+}
+
+.btn-color-mode-switch{
+    display: block;
+    margin: 0px;
+    position: relative;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner{
+    margin: 0px;
+    width: 100%;
+    height: 30px;
+    background: #E0E0E0;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+    display: block;
+}
+
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:before{
+    content: attr(data-on);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 7px;
+    right: 20px;
+}
+.btn-color-mode-switch > label.btn-color-mode-switch-inner:after{
+    content: attr(data-off);
+    width: 100px;
+    height: 98%;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px;
+    padding: 5px 0px;
+}
+
+.btn-color-mode-switch > .alert{
+    display: none;
+    background: #FF9800;
+    border: none;
+    color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]{
+    cursor: pointer;
+    width: 90px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner{
+    color: #fff;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:after{
+    content: attr(data-on);
+    color: #424242;
+    left: 138px;
+}
+
+.btn-color-mode-switch input[type="checkbox"]:checked + label.btn-color-mode-switch-inner:before{
+    content: attr(data-off);
+    color: #424242;
+    right: auto;
+    left: 20px;
+}
+
+
+
+.btn-color-mode-switch input[type="checkbox"]:checked ~ .alert{
+    display: block;
+}
+
+
+/* Switch purpose*/
+.btn-container-purpose{
+    display: block;
+    vertical-align: middle;
+    text-align: center;
+    z-index: 0;
+    position: relative;
+}
+
+div.btn-container-purpose i{
+    display: inline-block;
+    position: relative;
+    top: -9px;
+}
+
+label {
+    font-size: 13px;
+    color: #424242;
+    font-weight: 500;
+}
+
+.btn-color-mode-switch-purpose{
+    display: block;
+    margin: 0px;
+    position: relative;
+}
+
+.btn-color-mode-switch-purpose > label.btn-color-mode-switch-inner-purpose{
+    margin: 0px;
+    width: 100%;
+    height: 30px;
+    background: #E0E0E0;
+    border-radius: 26px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+    /*box-shadow: 0px 0px 8px 0px rgba(17, 17, 17, 0.34) inset;*/
+    display: block;
+}
+
+.btn-color-mode-switch-purpose > label.btn-color-mode-switch-inner-purpose:before{
+    content: attr(data-on);
+    position: absolute;
+    font-size: 12px;
+    font-weight: 500;
+    top: 7px;
+    right: 20px;
+}
+.btn-color-mode-switch-purpose > label.btn-color-mode-switch-inner-purpose:after{
+    content: attr(data-off);
+    width: 100px;
+    height: 98%;
+    background: #fff;
+    border-radius: 26px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    bottom: 2px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px;
+    padding: 5px 0px;
+}
+
+.btn-color-mode-switch-purpose > .alert{
+    display: none;
+    background: #FF9800;
+    border: none;
+    color: #fff;
+}
+
+.btn-color-mode-switch-purpose input[type="checkbox"]{
+    cursor: pointer;
+    width: 90px;
+    height: 25px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    margin: 0px;
+}
+
+.btn-color-mode-switch-purpose input[type="checkbox"]:checked + label.btn-color-mode-switch-inner-purpose{
+    color: #fff;
+}
+
+.btn-color-mode-switch-purpose input[type="checkbox"]:checked + label.btn-color-mode-switch-inner-purpose:after{
+    content: attr(data-on);
+    color: #424242;
+    left: 138px;
+}
+
+.btn-color-mode-switch-purpose input[type="checkbox"]:checked + label.btn-color-mode-switch-inner-purpose:before{
+    content: attr(data-off);
+    color: #424242;
+    right: auto;
+    left: 20px;
+}
+
+
+
+.btn-color-mode-switch-purpose input[type="checkbox"]:checked ~ .alert{
+    display: block;
+}
+
+
+/* Slider */
+
+input[type="range" i] {
+    appearance: auto;
+    cursor: default;
+    color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+    padding: initial;
+    border: initial;
+    margin: 2px;
+}
+
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+
+  .slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    background: #04AA6D;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 768px) {
+    #submit-payment {
+    width: 50%;
+    }
+    #google_translate_element {
+    width: 50%;
+    }
+
+    #google_translate_element .goog-te-combo{
+    padding: 10px 0px;
+    width: 100%;
+    display: block;
+    }
+    .connect-btn a {
+    font-size: 12px;
+    padding: 4px;
+    }
+    #google_translate_element .goog-te-combo{
+    padding: 4px;
+    font-size: 12px;
+    }
+    .connect-btn a{
+    width: 100%;
+    display: block;
+    }
+  }
+  @media only screen and (max-width: 575px) {
+    #submit-payment {
+    width: 100%;
+    }
+    .connect-btn a {
+    padding: 9px;
+    }
+    #google_translate_element {
+    width: 100%;
+    }
+    .main-button{
+    display: block;
+    }
+    #google_translate_element .goog-te-combo{
+    width: 100%;
+    padding: 9px;
+    }
+  }
+
+
+
+
+
+
+
+  /*-------Toggle CSS-----*/
+
+
+  .tw-toggle {
+    /* background: #95A5A6; */
+    display: inline-block;
+    padding: 2px 3px;
+    border-radius: 20px;
+    position:relative;
+    /* border: 2px solid #95A5A6; */
+    background: #E0E0E0;
+    width: 100%;
+  }
+  .frst-radio {
+    left: 0px;
+}
+  label.toggle.toggle-yes.lst-radio-txt {
+    right: -42px;
+}
+  .tw-toggle label {
+    text-align: center;
+    font-family: sans-serif;
+    display: inline-block;
+    color: #95A5A6;
+    position:relative;
+    z-index:2;
+    margin: 0;
+    text-align: center;
+    padding: 2px 3px;
+    font-size: 13px;
+    /* cursor: pointer; */
+  }
+
+  .tw-toggle input {
+    position: absolute;
+    z-index: 3;
+    opacity: 0;
+    cursor: pointer;
+    width: 60px;
+    top: 5px;
+    height: 20px;
+  }
+
+  .tw-toggle .toggle-div {
+    height: 25px;
+    width: 75px;
+    line-height: 21px;
+    border-radius: 20px;
+    background:#fff;
+    display:block;
+    position:absolute;
+    left: 22px;
+    top: 2px;
+    transition:all 0.3s ease-in-out;
+    /* margin-left: 7px; */
+  }
+
+  .tw-toggle input[value="Budget"]:checked ~ .toggle-div{
+    background:#fff;
+    left:-1px;
+    color:#fff;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px;
+  }
+
+  .tw-toggle input[value="Premium"]:checked ~ .toggle-div{
+    background:#fff;
+    left: 203px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px;
+  }
+  .tw-toggle input[value="Medium"]:checked ~ .toggle-div{
+    background:#fff;
+    left: 96px;
+    transition: all 0.3s ease;
+    box-shadow: 0px 0px 6px -2px;
+  }
+  .lst-radio {
+    right: 3%;
+}
+  .frst-radio{
+
+  }
+  .tw-toggle input[value="Budget"]:checked + label,.tw-toggle input[value="Premium"]:checked + label{
+    color:#fff;
+  }
+  .tw-toggle input[value="Medium"]:checked + label{
+    color:#fff;
+  }
+  .budget-primimum label.form-label {
+    width: 100%;
+}
+.first-check{
+    left: -39px;
+}
+
+
+
+@media only screen and (max-width: 1399px) {
+    .first-check {
+    left: -18px;
+    }
+    .toggle.toggle-yes.lst-radio-txt {
+    right: -18px !important;
+    }
+    .tw-toggle input[value="Premium"]:checked ~ .toggle-div {
+    left: 157px;
+    }
+    .tw-toggle input[value="Medium"]:checked ~ .toggle-div {
+    background: #fff;
+    left: 72px;
+    }
+}
+@media only screen and (max-width: 1199px) {
+    .toggle.toggle-yes.lst-radio-txt {
+    right: -35px !important;
+    }
+    .lst-radio {
+    right: 5%;
+    }
+    .tw-toggle input[value="Premium"]:checked ~ .toggle-div {
+    left: 190px;
+    }
+    .tw-toggle input[value="Medium"]:checked ~ .toggle-div {
+    left: 95px;
+    }
+    .toggle.toggle-yes.medium-txt {
+    left: 6px;
+    }
+    .toggle-yes.first-check {
+    left: -31px;
+    }
+
+}
+@media only screen and (max-width: 992px) {
+.tw-toggle label{
+    font-size: 13px;
+}
+.toggle-yes.first-check {
+    left: -21px;
+}
+.toggle-yes.first-check {
+    left: -29px;
+}
+.tw-toggle input[value="Medium"]:checked ~ .toggle-div {
+    left: 85px;
+}
+.tw-toggle input[value="Premium"]:checked ~ .toggle-div {
+    left: 169px;
+}
+}
+
+
+@media only screen and (max-width: 480px) {
+.toggle-yes.first-check {
+    left: -99px;
+}
+.toggle.toggle-yes.lst-radio-txt {
+    right: -103px !important;
+}
+.tw-toggle input[value="Premium"]:checked ~ .toggle-div {
+    left: 313px;
+}
+.tw-toggle input[value="Medium"]:checked ~ .toggle-div {
+    left: 157px;
+}
+}
+
+@media only screen and (max-width: 425px) {
+    .toggle-yes.first-check {
+    left: -75px;
+    }
+    .tw-toggle input[value="Medium"]:checked ~ .toggle-div {
+    left: 131px;
+    }
+    .tw-toggle input[value="Premium"]:checked ~ .toggle-div {
+    left: 260px;
+    }
+    .toggle.toggle-yes.lst-radio-txt {
+    right: -79px !important;
+    }
+}
+
+@media only screen and (max-width: 393px) {
+    .toggle-yes.first-check {
+    left: -59px;
+    }
+    .toggle.toggle-yes.lst-radio-txt {
+    right: -61px !important;
+    }
+    .tw-toggle input[value="Premium"]:checked ~ .toggle-div {
+    left: 228px;
+    }
+    .tw-toggle input[value="Medium"]:checked ~ .toggle-div {
+    left: 115px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .toggle-yes.first-check {
+    left: -54px;
+    }
+    .tw-toggle input[value="Medium"]:checked ~ .toggle-div {
+    left: 107px;
+    }
+    .tw-toggle input[value="Premium"]:checked ~ .toggle-div {
+    left: 211px;
+    }
+    .toggle.toggle-yes.lst-radio-txt {
+    right: -54px !important;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .toggle-yes.first-check {
+    left: -21px;
+    }
+    .tw-toggle input[value="Medium"]:checked ~ .toggle-div {
+    left: 78px;
+    }
+    .tw-toggle input[value="Premium"]:checked ~ .toggle-div {
+    left: 157px;
+    }
+    .toggle.toggle-yes.lst-radio-txt {
+    right: -26px !important;
+    }
+}
+@media only screen and (max-width: 767px) and (min-width: 520px) {
+    .toggle-yes.first-check {
+    left: -130px;
+    }
+    .toggle.toggle-yes.medium-txt {
+    left: 0px;
+    }
+    .tw-toggle input[value="-1"]:checked ~ .toggle-div {
+    left: 180px;
+    }
+    .tw-toggle input[value="true"]:checked ~ .toggle-div {
+    left: 375px;
+    }
+    .toggle.toggle-yes.lst-radio-txt {
+    right: -135px !important;
+    }
+    .tw-toggle input[value="Premium"]:checked ~ .toggle-div {
+    left: 375px;
+    }
+    .tw-toggle input[value="Medium"]:checked ~ .toggle-div {
+    left: 190px;
+    }
+    .toggle.toggle-yes.medium-txt {
+    left: 8px;
+    }
+    /* .tw-toggle input[value="Budget"]:checked ~ .toggle-div{
+    left: 84%;
+    } */
+}
+
+

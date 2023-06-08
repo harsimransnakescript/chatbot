@@ -1,0 +1,63 @@
+{
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "I'm sorry, but I need more information to provide a proper response. Could you please clarify your budget and duration for the trip to India?",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1683185139,
+    "id": "chatcmpl-7CNdLFWxaxHTivy2qnUWM5Lu1Mkl5",
+    "model": "gpt-3.5-turbo-0301",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 29,
+      "prompt_tokens": 37,
+      "total_tokens": 66
+    }
+  },
+
+
+
+  {
+    "choices": [
+      {
+        "finish_reason": "stop",
+        "index": 0,
+        "message": {
+          "content": "With a budget of 10000 and a duration of 5 days, you can have a wonderful trip to India. Here are some suggestions for your itinerary:\n\nDay 1: Arrival in Delhi\nStart your trip in the capital city of India, Delhi. Visit the famous landmarks such as the Red Fort, Qutub Minar, and India Gate. You can also explore the bustling markets of Chandni Chowk and Connaught Place.\n\nDay 2: Agra\nTake a day trip to Agra to see the iconic Taj Mahal, one of the Seven Wonders of the World. You can also visit the Agra Fort and the Tomb of Itimad-ud-Daulah.\n\nDay 3: Jaipur\nTravel to Jaipur, also known as the Pink City. Visit the Amber Fort, Hawa Mahal, and the City Palace. You can also shop for traditional Rajasthani handicrafts and textiles.\n\nDay 4: Udaipur\nTravel to Udaipur, also known as the City of Lakes. Visit the City Palace, Jagdish Temple, and the Saheliyon-ki-Bari gardens. You can also take a boat ride on Lake Pichola.\n\nDay 5: Departure\nSpend your last day in India exploring the local markets and trying out the delicious street food. Depart for your home country in the evening.\n\nNote: This itinerary is just a suggestion and can be customized according to your preferences and interests. Also, keep in mind that the cost of flights and accommodation may vary depending on the season and availability.",
+          "role": "assistant"
+        }
+      }
+    ],
+    "created": 1683185063,
+    "id": "chatcmpl-7CNc7Co5LPJomW9ObaNZye3SuD07t",
+    "model": "gpt-3.5-turbo-0301",
+    "object": "chat.completion",
+    "usage": {
+      "completion_tokens": 322,
+      "prompt_tokens": 38,
+      "total_tokens": 360
+    }
+  } before
+  With a budget of 10000 and a duration of 5 days, you can have a wonderful trip to India. Here are some suggestions for your itinerary:
+  
+  Day 1: Arrival in Delhi
+  Start your trip in the capital city of India, Delhi. Visit the famous landmarks such as the Red Fort, Qutub Minar, and India Gate. You can also explore the bustling markets of Chandni Chowk and Connaught Place.
+  
+  Day 2: Agra
+  Take a day trip to Agra to see the iconic Taj Mahal, one of the Seven Wonders of the World. You can also visit the Agra Fort and the Tomb of Itimad-ud-Daulah.
+  
+  Day 3: Jaipur
+  Travel to Jaipur, also known as the Pink City. Visit the Amber Fort, Hawa Mahal, and the City Palace. You can also shop for traditional Rajasthani handicrafts and textiles.
+  
+  Day 4: Udaipur
+  Travel to Udaipur, also known as the City of Lakes. Visit the City Palace, Jagdish Temple, and the Saheliyon-ki-Bari gardens. You can also take a boat ride on Lake Pichola.
+  
+  Day 5: Departure
+  Spend your last day in India exploring the local markets and trying out the delicious street food. Depart for your home country in the evening.
+  
+  Note: This itinerary is just a suggestion and can be customized according to your preferences and interests. Also, keep in mind that the cost of flights and accommodation may vary depending on the season and availability. after

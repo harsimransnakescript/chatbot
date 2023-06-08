@@ -1,0 +1,439 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>expert4travel</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link rel="stylesheet" type="text/css" href="/static/fonts/stylesheet.css">
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="https://js.stripe.com/v3/"></script>
+  <!--<script src="{% static 'main.js' %}"></script>  this is the main file uncomment it  -->
+  <script src="{% static 'index.js' %}"></script>
+  <script src="{% static 'modal.js' %}"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked@3.0.7/marked.min.js"></script>
+
+  <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no">
+  <link href="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css" rel="stylesheet">
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js"></script>
+
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
+  <style>
+
+    .VIpgJd-ZVi9od-aZ2wEe-wOHMyf-ti6hGc{
+      display: none !important;
+    }
+.goog-te-gadget img{
+    display:none !important;
+}
+body > .skiptranslate {
+    display: none;
+}
+body {
+    top: 0px !important;
+}
+
+
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #map {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+
+  </style>
+</head>
+
+<body>
+  <script
+    src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+  <link rel="stylesheet"
+    href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+
+  <style>
+    #geocoder {
+      z-index: 1;
+      margin: 20px;
+    }
+
+    .mapboxgl-ctrl-geocoder--button {
+      display: none;
+    }
+
+    .mapboxgl-ctrl-geocoder .mapboxgl-ctrl-geocoder--icon-search {
+      display: none;
+    }
+
+    .mapboxgl-ctrl-geocoder {
+      min-width: 100%;
+    }
+
+    ul.suggestions li::before {
+      display: none;
+    }
+  </style>
+
+
+  </head>
+
+  <body>
+
+    <!-- Modal -->
+    <div class="connect_to_travel_agent_modal">
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Connect to Travel Agent</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form>
+                <div class="mb-3">
+                  <label for="name" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="name" aria-describedby="emailHelp" required>
+                  <label for="email" class="form-label">Email address</label>
+                  <input type="email" class="form-control" id="email" aria-describedby="emailHelp" required>
+                  <label for="number" class="form-label">Contact Number</label>
+                  <input type="number" class="form-control" id="number" aria-describedby="emailHelp" required min="1">
+                  <div id="emailHelp" class="form-text">We'll never share your contact details with anyone else.</div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn close-btn" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn submit_btn" id="submit-modal" data-bs-dismiss="modal"
+                disabled>Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="book-travel" id="test">
+
+
+
+
+
+      <div class="container">
+        <div class="travel-header">
+          <div class="login-logo">
+            <a href=""><img src="./static/images/travel-logo.png"></a>
+          </div>
+
+          <div class="main-button">
+            <div id="submit-payment" class="connect-btn">
+              <a style="color: white;" data-bs-toggle="modal" data-bs-target="#exampleModal">Connect to travel agent</a>
+              <div class="loader-container1 mb-4 d-flex justify-content-between">
+                <div id="loading1"></div>
+              </div>
+
+            </div>
+            <!-- Google translator-->
+            <div id="google_translate_element"></div>
+            <!-- Google translator ended -->
+          </div>
+
+        </div>
+
+        <div class="travel-form-outer">
+          <div class="travel-form-inner">
+            <div class="row">
+              <div class="col-12 col-md-10 col-lg-8 col-xl-6 m-auto">
+                <div class="booking-form ">
+
+                  <form method="post" id="travel-form">
+                    {% csrf_token %}
+                    <div class="row">
+                      <div class="col-md-12">
+                        <div class="mb-3">
+                          <div class="mb-3">
+                            <div id="geocoder"></div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                      <div class="col-md-6 budget-primimum">
+
+                        <!-----Start Toggle Css---->
+                        <div class="mb-3">
+                          <div class="btn-container-purpose">
+                            <label class="switch btn-color-mode-switch">
+                              <label for="input2" style="color: #ccc" class="form-label">Budget:</label>
+                              <div class="tw-toggle">
+
+                                <input type="radio" name="toggle" value="Budget" class="frst-radio">
+                                <label class="toggle toggle-yes first-check ">Budget</label>
+
+                                <input checked type="radio" name="toggle" value="Medium" class="medium-txt-toggle">
+                                <label class="toggle toggle-yes medium-txt ">Medium</label>
+
+                                <input type="radio" name="toggle" value="Premium" class="lst-radio">
+                                <label class="toggle toggle-yes lst-radio-txt ">Premium</label>
+
+                                <span class="toggle-div"></span>
+                              </div>
+                          </div>
+                          </label>
+                        </div>
+                        <!----End TOggle Css------>
+
+
+                      </div>
+                      <div class="col-md-6">
+
+                        <div class="mb-3">
+                          <div class="btn-container-purpose">
+                            <label class="switch-purpose btn-color-mode-switch-purpose">
+                              <label for="input3" style="color: #ccc" class="form-label1">Purpose:</label><br>
+                              <input type="checkbox" name="color_mode_purpose" id="color_mode_purpose" value="1">
+                              <label for="color_mode_purpose" data-on="Business" data-off="Vacations"
+                                class="btn-color-mode-switch-inner-purpose"></label>
+                            </label>
+                          </div>
+                        </div>
+
+
+
+
+
+                      </div>
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <div class="slidecontainer">
+                            <p style="color: #ccc">How long do you want to go:</p>
+                            <input type="range" min="1" max="30" value="7" id="myRange">
+                            <p style="color: #ccc;">Days: <span id="value"></span></p>
+                          </div>
+                        </div>
+                      </div>
+
+
+
+
+                      <div class="col-md-6">
+                        <div class="mb-3">
+                          <p>Select Hotel Category</p>
+                          <div class="rating">
+                            <span data-value="1">☆</span>
+                            <span data-value="2">☆</span>
+                            <span data-value="3">☆</span>
+                            <span data-value="4">☆</span>
+                            <span data-value="5">☆</span>
+                          </div>
+
+                        </div>
+                      </div>
+
+
+
+                      <div class="col-md-12">
+                        <div class="mb-3 text-cente build-itinerary">
+                          <button id="submit-btn" class="btn">Build Itinerary</button>
+                        </div>
+                      </div>
+                      <!--Response div-->
+                      <div id="response-container mt-4">
+                        <div class="loader-container mb-4 d-flex justify-content-between">
+                          <div id="response" class="response-div mt-4"></div>
+                          <div class="loader-container mb-4 d-flex justify-content-between">
+                            <div id="loading"></div>
+                          </div>
+                        </div>
+                      </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <script type="text/javascript">
+
+      const responseDiv = document.getElementById("response");
+      const observer = new MutationObserver(scrollToBottom);
+      const config = { childList: true };
+
+      let isScrolledToBottom = true; // Flag to indicate if the user is scrolled to the bottom
+
+      observer.observe(responseDiv, config);
+
+      // Handle scroll event to update the isScrolledToBottom flag
+      window.addEventListener("scroll", () => {
+        const { scrollTop, clientHeight, scrollHeight } = document.documentElement;
+        isScrolledToBottom = scrollTop + clientHeight >= scrollHeight;
+      });
+
+      function scrollToBottom() {
+        if (isScrolledToBottom) {
+          window.scrollTo(0, document.body.scrollHeight);
+        }
+      }
+
+
+
+
+
+      document.addEventListener('DOMContentLoaded', function () {
+        // Get the input element
+        var inputElement = document.querySelector('.mapboxgl-ctrl-geocoder--input');
+
+        // Change the placeholder text
+        if (inputElement) {
+          inputElement.placeholder = 'Where would you like to go?';
+        }
+      });
+
+
+      var selectedValue = null;
+
+      $('.rating > span').mouseenter(function () {
+        $(this).prevAll().addBack().addClass('hovered');
+        $(this).nextAll().removeClass('hovered');
+      }).click(function () {
+        selectedValue = $(this).data('value');
+        $('.rating > span').removeClass('selected');
+        $(this).prevAll().addBack().addClass('selected');
+        $(this).nextAll().removeClass('selected');
+        console.log('Selected value: ' + selectedValue);
+        localStorage.setItem('selectedValue', selectedValue);
+
+      });
+
+      $('.rating').mouseleave(function () {
+        $('.rating > span').removeClass('hovered');
+        $('.rating > span').removeClass('selected');
+        if (selectedValue !== null) {
+          $('.rating > span[data-value="' + selectedValue + '"]').prevAll().addBack().addClass('selected');
+        }
+      });
+
+
+
+
+
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement(
+          { pageLanguage: "bn" },
+          "google_translate_element"
+        );
+        // Add event listener to select element
+        const selectElement = document.querySelector(".goog-te-combo");
+        selectElement.selectedIndex = 10; // Index of the English option
+        console.log(selectElement.selectedIndex)
+        console.log("selectElement",selectElement.value)
+        selectElement.addEventListener("change", () => {
+          const selectedLanguage = selectElement.options[selectElement.selectedIndex].textContent;
+          localStorage.setItem('language', selectedLanguage);
+          console.log(selectedLanguage,"jhehjfhjgfhj")
+        });
+      }
+
+
+
+      function hideGoogleTranslateRating() {
+  const ratingElement = document.querySelector('.goog-te-banner-frame.skiptranslate');
+  if (ratingElement) {
+    ratingElement.style.display = 'none';
+  }
+}
+
+// Call the function to hide the rating message
+hideGoogleTranslateRating();
+
+
+
+
+
+
+
+
+
+      var slider = document.getElementById("myRange");
+      var output = document.getElementById("value");
+      output.innerHTML = slider.value; // Display the default slider value
+
+      // Update the current slider value (each time you drag the slider handle)
+      slider.oninput = function () {
+        output.innerHTML = this.value;
+      }
+
+
+      const nameInput = document.getElementById('name');
+      const emailInput = document.getElementById('email');
+      const numberInput = document.getElementById('number');
+      const submitBtn = document.getElementById('submit-modal');
+
+      function validateInputs() {
+        const name = nameInput.value.trim();
+        const email = emailInput.value.trim();
+        const number = numberInput.value.trim();
+        const validName = name.length >= 0;
+        const validEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        const validNumber = number.length > 0 && !isNaN(number) && parseInt(number) >= 1;
+
+        if (validName && validEmail && validNumber) {
+          submitBtn.disabled = false;
+        } else {
+          submitBtn.disabled = true;
+        }
+      }
+
+      nameInput.addEventListener('input', validateInputs);
+      emailInput.addEventListener('input', validateInputs);
+      numberInput.addEventListener('input', validateInputs);
+
+
+
+
+
+      function clearAllCookies() {
+  var cookies = document.cookie.split(";");
+
+  for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i];
+        var eqPos = cookie.indexOf("=");
+        var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
+        document.cookie = name + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+        document.cookie = "googtrans=/en/en";
+      }
+    }
+    clearAllCookies()
+
+    </script>
+
+
+
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.min.js"></script>
+    <script type="text/javascript"
+      src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  </body>
+
+</html>
